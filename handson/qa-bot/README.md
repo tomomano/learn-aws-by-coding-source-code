@@ -1,6 +1,5 @@
 # Creating a Transformer-based Q&A bot system
 
-
 ## Installation
 
 ```bash
@@ -19,7 +18,7 @@ export AWS_SECRET_ACCESS_KEY=ABCDEFGHIJK
 export AWS_DEFAULT_REGION=ap-northeast-1
 ```
 
-### Deploy
+## Deploy
 
 ```bash
 cdk deploy
