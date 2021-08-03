@@ -1,0 +1,7 @@
+aws-cdk.aws-s3==1.100.0
+boto3
+jupyter
+pandas
+matplotlib
+Pillow==7.2
+requests
