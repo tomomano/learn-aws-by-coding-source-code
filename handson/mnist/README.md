@@ -1,4 +1,4 @@
-# Creating a EC2 instance
+# Running ML code with GPU and Jupyter
 
 ## Installation
 
