@@ -38,8 +38,6 @@ chmod 400 ~/.ssh/HirakeGoma.pem
 
 ## Deploy
 
-To deploy the stack, run
-
 ```bash
 cdk deploy -c key_name=$KEY_NAME
 ```
