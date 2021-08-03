@@ -24,12 +24,6 @@ export AWS_DEFAULT_REGION=ap-northeast-1
 cdk deploy
 ```
 
-## Destroy
-
-```bash
-cdk destroy
-```
-
 ## Submitting tasks
 
 Submit a single question:
@@ -54,4 +48,10 @@ Clear all the questions asked before (i.e. empty the database):
 
 ```bash
 python run_task.py clear
+```
+
+## Destroy
+
+```bash
+cdk destroy
 ```

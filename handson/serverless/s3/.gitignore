@@ -1,0 +1,11 @@
+*tmp.txt
+
+.vscode
+*.pem
+cdk.out
+cdk.context.json
+
+.env
+__pycache__/
+*.py[cod]
+*$py.class
