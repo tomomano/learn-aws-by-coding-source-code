@@ -1,4 +1,4 @@
-# simple_vue_app
+# Neural Art Canvas GUI
 
 ## Project setup
 ```
