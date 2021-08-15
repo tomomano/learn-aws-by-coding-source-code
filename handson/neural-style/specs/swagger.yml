@@ -1,0 +1,75 @@
+openapi: 3.0.0
+info:
+  title: Deep Art Generator API
+  version: 0.1.0
+
+paths:
+  /job:
+    post:
+      summary: Post a new job
+      description: |
+        The API returns `style_image_url` and `content_image_url` to upload style and content image, respectively. 
+      requestBody:
+        required: false
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                style_weight:
+                  type: number
+                content_weight:
+                  type: number
+      responses:
+        201:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job_id:
+                    type: string
+                  state:
+                    type: string
+                    enum: ["submitted", "processing", "completed", "failed"]
+                  style_image_url:
+                    type: string
+                  content_image_url:
+                    type: string
+  /job/{item_id}:
+    parameters:
+      - in: path
+        name: item_id
+        required: true
+        description: ID of the job
+        schema:
+          type: string
+    get:
+      summary: Get the result of the job
+      description: |
+        `generated_image_url` is returned only if the `status` is `completed`.
+      responses:
+        200:
+          description: OK
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  job_id:
+                    type: string
+                  status:
+                    type: string
+                    enum: ["submitted", "processing", "completed", "failed"]
+                  style_image_url:
+                    type: string
+                  content_image_url:
+                    type: string
+                  generated_image_url:
+                    type: string
+    delete:
+      summary: Delete the job
+      responses:
+        204:
+          description: Resource deleted successfully
