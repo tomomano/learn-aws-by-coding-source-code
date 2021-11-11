@@ -5,3 +5,4 @@ pandas
 matplotlib
 Pillow==7.2
 requests
+pyparsing=2.2.1

@@ -9,3 +9,4 @@ boto3
 jupyter
 pandas
 matplotlib
+pyparsing==2.2.1
